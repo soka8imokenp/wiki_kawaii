@@ -5,38 +5,38 @@ import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 
-// --- ИЗМЕНЕНИЕ: Супер-элегантные шрифты ---
+// --- SHRIFTLAR ---
 import { Cormorant_Garamond, Sacramento } from 'next/font/google';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '600', '700'] });
 const sacramento = Sacramento({ subsets: ['latin'], weight: ['400'] });
 
-// --- ДАННЫЕ ГЛАВЫ 1 ---
-const chapterOne = {
+// --- 4-BOB MA'LUMOTLARI ---
+const chapterFour = {
   paragraphs: [
-    "Yuqori sinfda kuzning hidi doim bir xil bo'ladi: bo'r, eski pardalarning changi va yaqinlashib kelayotgan vahima hidi.",
-    "Men deraza oldidagi eng oxirgi partada o'tiribman. Men o'qigan yuzlab mangalar syujetiga ishonadigan bo'lsak, bu joy faqatgina aqlbovar qilmas voqealar girdobiga tortiladigan bosh qahramonlar uchun mo'ljallangan. Lekin keling, realist bo'lamiz: men bosh qahramon emasman. Eng yaxshi holatda, men — \"O'quvchi S\", sinf bo'sh ko'rinmasligi uchungina kerak bo'ladigan fon personajiman.",
-    "Sinfda quloqni qomatga keltiruvchi shovqin hukm surardi. Doskada qiyshiq, shoshilinch harflar bilan shunday yozilgandi: «Madaniy festival! Bizning loyiha — PYESA!».",
-    "Sinf sardori faol imo-ishoralar bilan orqa qatordagilardan balandroq ovozda gapirishga urinardi. Qizlar partalarni birlashtirib, kim liboslar tikishini qizg'in muhokama qilishar, yigitlar esa bosh yovuz qahramon roli kimga nasib etishi ustida tortishishardi. Havo tom ma'noda ularning energiyasidan uchqun sochardi. Ular kulishar, bir-birlarining gapini bo'lishar, ko'zlarida ishtiyoq yonardi.",
-    "Men ularga o'zimning juda katta, qulay oversize-sviterimning yoqasi ortidan qarab turardim, ayniqsa qattiq kulgi portlashini eshitganida o'ng qulog'im asabiy pirpirab ketdi. Uzun, oq, paxmoq quyon qulog'i.",
-    "Men beixtiyor boshimni yelkamga tortdim. Lekin, albatta, hech kim hech narsani sezmadi. Kiyim burmalari ostiga yashiringan paxmoq dumim stressdan tugun bo'lib qolsa ham — inson miyasi o'zining qulay «ko'r nuqtasi» bilan buni baribir reallikdan o'chirib tashlagan bo'lardi. Ular uchun men shunchaki Sumire edim. Doim burnini kitobga suqib yuradigan, tinch va biroz g'alati sinfdosh qiz.",
-    "To'g'risini aytsam, bu qulay edi. Ko'rinmas bo'lish — mening ongli tanlovim. Hech kim seni doskaga chaqirmaydi, hech kim ziyofatlarda qadah so'zi aytishni so'ramaydi, hech kim ob-havo haqidagi noqulay suhbatlarni davom ettirishga majbur qilmaydi.",
-    "Ammo aynan bugun, bu shovqinli, jonli sinfga qarab, ichimda nimadir g'amgin siqilayotganini his qildim.",
-    "— Ssenariy! Bizga zudlik bilan tuzukroq ssenariy yozib beradigan odam kerak! — sinf sardorining umidsiz ovozi qulog'imga chalindi. — Axir biz shunchaki do'stlik kuchi bilan ajdahoni yenggan qahramon haqidagi hikoyani sahnalashtira olmaymiz-ku. Bu juda oddiy!",
-    "— Bizda kim yozishni eplay oladi? — kimdir o'ylanib qolib savol berdi.",
-    "Atrofda sukunat cho'kdi.",
-    "Sumkamda bitta yon daftarim bor edi, unda men zerikkanimdan o'nlab syujet burilishlarini yozib chiqqan, to'qima dunyolarning tarixi va hech qachon ovoz chiqarib aytmaydigan dialoglarni o'ylab topgan edim. Men hikoyani qanday qilib qiziqarli qilishni bilardim. Nima uchun qahramon ikkilanishi kerakligini va tomoshabinlar nafasini yutib kuzatishi uchun ziddiyatni qanday to'g'ri qurishni bilardim.",
-    "\"Qani, buni ayt,\" — pichirladi ichki ovozim. — \"Shunchaki qo'lingni ko'tar. 'Men urinib ko'rishim mumkin', de\".",
-    "Yuragim tomog'imning qayeridadir ura boshladi. Partaning chetiga changallagan barmoqlarim oqarib ketdi. Ijtimoiy batareyam tanqidiy quvvat darajasidan ogohlantirib, qizil rangda miltillay boshladi. Agar men hozir ovoz chiqarsam, hamma menga qaraydi. Yigirmata juft ko'z. Ular mendan so'z kutishadi. Agar tutilib qolsam-chi? Ovozim qaltirab ketsa-chi? Yoki ular: \"Oho, u gapirishni bilar ekan-ku?\" deb o'ylashsa yoki g'oyamni ustidan kulishsa-chi?",
-    "Men ko'zlarimni qattiq yumdim va... xuddi tarix darsligini o'qishga berilib ketgandek o'zini ko'rsatib, boshimni yanada pastga egdim.",
-    "Sinfdagi sukunat qanday tez boshlangan bo'lsa, shunday tez tugadi. — Mayli, kelinglar shunchaki biror eski filmning syujetini ko'chirib qo'yaqolamiz! — qo'l siltadi yigitlardan biri va sinf yana muhokamalar shovqiniga g'arq bo'ldi.",
-    "Imkoniyat qo'ldan boy berildi.",
-    "Bir vaqtning o'zida ham yengillik, ham... o'zimdan hafsalam pir bo'lganini his qilib, chuqur xo'rsinib qo'ydim.",
-    "Vaqt shunchalik tez o'tmoqda. Ularning barchasi qayergadir harakat qilishmoqda, xato qilishmoqda, urishishmoqda, yarashishmoqda, xotiralar yaratishmoqda. Men esa o'zimning qulay, xavfsiz sukunatimda o'tiribman va ularning nuriga uzoqdan qarab turibman. Bu maktab kunlari tugaganda nima bo'ladi? Butun dunyodan qo'rqadigan bu qo'rquvim bilan qayerga boraman?",
-    "Nigohimni derazaga qaratdim. Kuzgi shamol osmondagi og'ir bulutlarni haydab borardi.",
-    "Men o'z xohishim bilan ko'rinmasman. Ammo negadir aynan hozir kimdir meni payqashini shunchalik qattiq xohlab ketdim."
+    "Madaniy festival arafasida maktab doim biroz sehrlidek tuyuladi. Yo'laklar kartonlarga to'lib-toshgan, yarim ochiq xonalar eshiklaridan musiqa parchalari eshitilar, havo esa intiqlik hissidan g'uvullardi.",
+    "Biz faollar zalining o'rtasida turib, sahnaga qarardik.",
+    "Ustida yorilgan Muhr chizilgan ulkan faner qasr... aqlbovar qilmas darajada ajoyib ko'rinardi. Projektorlar yorug'ida toshlardagi yoriqlar haqiqiydik ko'rinar, to'q ranglar esa biz uzoq vaqt davomida o'ylab topgan o'sha qorong'u fentezi muhitini yaratib turgandi.",
+    "— Biz buni uddaladik, — chuqur nafas chiqardi Aoi. Uning yuzida ko'k guashning izi qolib ketgan, sochlari to'zg'igan edi, lekin ko'zlari shunchalik yorqin porlardiki, ular butun zalni elektr tokisiz ham yorita olardi.",
+    "— Bir guruh havaskorlar uchun yomon emas, — miyig'ida kuldi Ryu, toza futbolkasining cheti bilan ko'zoynagini artib.",
+    "Men ularning biroz orqasida turardim. Barmoqlarimdan hamon akril hidi kelar, uzoq vaqt cho'qqayib o'tirganimdan belim og'rirdi. Men oxirigacha ketmagan mitti qora bo'yoq dog'i bor bo'lgan oddiy, biroz xippa burnimni beixtiyor ishqalab qo'ydim.",
+    "— Hey, bollar! — Aoi bizga o'girildi. — Tomga chiqamizmi? Bugun quyosh botishi shunchaki aqldan ozdirarli, biz buni ko'rishimiz shart.",
+    "Odatda «qayergadir birga boraylik» degan so'zlar menda zudlik bilan qochish istagini uyg'otardi. Lekin hozir men shunchaki indamay bosh irg'adim va ularning ortidan ergashdim.",
+    "Biz gumburlayotgan beton zinalardan ko'tarilib, og'ir temir eshikni itarib ochdik. Shu zahotiyoq yuzimizga salqin kuz shamoli urildi. Osmon to'q binafsharang oltin va to'q qizil rangga aylanib yonardi, shahar uzra cheksiz gumbaz bo'lib yoyilgandi.",
+    "Biz to'rli to'siq oldiga keldik. Ryu panjaraga suyandi, Aoi esa yuzini baxtli tarzda shamolga burib turardi. Shamol mening oversize-sviterim ostiga kirayotganini his qilib, men ularning yoniga turdim. Odamlarning «ko'r nuqta»si tufayli bu ikkisi hech qachon ko'rmaydigan uzun oq quloqlarim shamolda xotirjam pirpirardi.",
+    "Men pastdagi bu ulkan, shovqinli shaharga qarab, to'satdan bitta muhim narsani anglab yetdim.",
+    "Qo'rquv yo'qolgandi.",
+    "Meni oxirgi parta orqasiga yashirinishga majbur qiladigan o'sha kelajak oldidagi qo'rquv. Yoshlik deb atalmish bu «tush» tugashi va men boshqalarning hayotini kuzatibgina chetda turib qolishimdan qo'rqish hissi.",
+    "\"Bu tush tugaganda nima bo'ladi?\" — deb tez-tez o'ylardim men oldinlari. Endi men javobni bilardim. Hech qanday qo'rqinchli narsa bo'lmaydi.",
+    "Chunki kelajak — bu qandaydir ulkan, qo'rqinchli noma'lumlik emas. Bu shunchaki ertangi kun. Ertaga biz o'z pyesamizni o'ynaymiz. Kimdir albatta so'zlarini unutib qo'yadi, karton devor tebranib ketishi mumkin, Aoi esa sahna ortida vahima qiladi. Lekin biz u yerda birga bo'lamiz.",
+    "Men sinf sardorining yuz tuzilishiga, keyin esa o'z kalonkasidan taralayotgan qandaydir ohangni sekin xirgoyi qilib turgan Ryuga qaradim.",
+    "Ular mening yashirin tog' qishlog'idan kelgan yokay ekanligimni bilishmaydi. Ular mening paxmoq dumimni ko'rishmaydi. Lekin ular \"meni\" ko'rishdi. Hikoyalar o'ylab topishni yaxshi ko'radigan va kitob do'konlaridagi maslahatchilardan o'lgudek qo'rqadigan o'sha haqiqiy Sumireni. Va ular meni shundayligimcha qabul qilishdi.",
+    "Ko'kragimda yana o'sha issiqlik yondi. Endi hech qachon yo'qolmasligiga ishonchim komil bo'lgan yorqin, nur sochayotgan tuyg'u. Bo'sh sinfda eshitgan o'sha ovozim esa, o'zimning ovozim bo'lib chiqdi.",
+    "Quloqlarim botayotgan quyoshning so'nggi nurlarini tutib olgandek dikkayib turardi.",
+    "Men hali ham introvert edim. Men hali ham dam olish kunlarini uyda, bir jild manga o'qib o'tkazishni afzal ko'rardim. Lekin agar bu shovqinli dunyo bir kun kelib yana meni ismim bilan chaqirsa... men boshqa yashirinmayman.",
+    "Men so'z beraman."
   ],
-  img: '/images/1.png'
+  img: '/images/4.png'
 };
 
 // ============================================================
@@ -97,7 +97,7 @@ const FadeInParagraph = ({ text }: { text: string }) => (
   </motion.p>
 );
 
-export default function SumireLorePage() {
+export default function ChapterFourPage() {
   return (
     <div className="min-h-screen bg-black md:bg-[#050408] text-white selection:bg-[#8a60c2] selection:text-white overflow-x-hidden scroll-smooth relative z-0">
       
@@ -111,14 +111,14 @@ export default function SumireLorePage() {
       {/* Кнопка назад */}
       <nav className="fixed top-0 left-0 w-full p-4 md:p-6 z-50 flex items-center justify-between pointer-events-none">
         <a 
-          href="/" 
+          href="/bob-3" 
           className="pointer-events-auto flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/5 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 transition-all font-sans"
         >
-          <ArrowLeft size={14} /> Bosh sahifa
+          <ArrowLeft size={14} /> 3 - Bob
         </a>
       </nav>
 
-      {/* Баннер. На мобилке - aspect-[4/3], на ПК - на весь экран. */}
+      {/* Баннер */}
       <header className="relative w-full z-10 flex flex-col md:block mb-10 md:mb-20">
         
         {/* Контейнер картинки */}
@@ -145,8 +145,8 @@ export default function SumireLorePage() {
               }}
             >
               <Image 
-                src={chapterOne.img} 
-                alt="Sumire 1-Tom" 
+                src={chapterFour.img} 
+                alt="Sumire 4-Bob" 
                 fill 
                 className="object-cover object-center opacity-85 brightness-90 contrast-[1.1]" 
                 unoptimized 
@@ -174,10 +174,10 @@ export default function SumireLorePage() {
           className="relative z-20 text-center px-4 -mt-12 sm:-mt-20 md:m-0 md:absolute md:bottom-20 md:left-0 md:w-full flex flex-col items-center"
         >
           <span className="font-sans text-[#8a60c2] text-xs md:text-sm tracking-[0.4em] uppercase font-bold block mb-3 md:mb-4 drop-shadow-md">
-            1 - Bob
+            4 - Bob
           </span>
           <h2 className={`text-4xl md:text-6xl font-bold text-white leading-snug md:leading-tight drop-shadow-lg ${cormorant.className}`}>
-            O'z xohishi bilan ko'rinmas
+            Bizning ufq
           </h2>
           <div className="w-12 h-[1px] bg-white/20 mt-6 md:mt-10" />
         </motion.div>
@@ -186,7 +186,7 @@ export default function SumireLorePage() {
       {/* Контент главы */}
       <main className="relative z-10 w-full pb-20">
         <div className="max-w-2xl mx-auto px-6 md:px-0 relative z-20">
-          {chapterOne.paragraphs.map((text, idx) => (
+          {chapterFour.paragraphs.map((text, idx) => (
             <FadeInParagraph key={idx} text={text} />
           ))}
         </div>
@@ -199,13 +199,13 @@ export default function SumireLorePage() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${cormorant.className}`}>Davomi bor...</h3>
-          <p className={`text-gray-400 text-xl md:text-2xl mb-10 ${sacramento.className}`}>Sumirening hikoyasini kuzatib boring</p>
+          <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${cormorant.className}`}>Hikoya yakuni</h3>
+          <p className={`text-gray-400 text-xl md:text-2xl mb-10 ${sacramento.className}`}>Sumirening sarguzashti o'z nihoyasiga yetdi...</p>
           <a 
-            href="/bob-2" 
-            className="px-8 md:px-10 py-3 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500"
+            href="/" 
+            className="px-8 md:px-10 py-3 md:py-4 rounded-full bg-[#8a60c2]/20 border border-[#8a60c2]/50 text-white font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-[#8a60c2] hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(138,96,194,0.3)]"
           >
-            Keyingi bob
+            Bosh sahifaga qaytish
           </a>
         </motion.div>
       </footer>
