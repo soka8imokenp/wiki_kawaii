@@ -36,7 +36,7 @@ const chapterOne = {
     "Nigohimni derazaga qaratdim. Kuzgi shamol osmondagi og'ir bulutlarni haydab borardi.",
     "Men o'z xohishim bilan ko'rinmasman. Ammo negadir aynan hozir kimdir meni payqashini shunchalik qattiq xohlab ketdim."
   ],
-  img: '/images/1.png'
+  img: '/images/1.webp'
 };
 
 // ============================================================

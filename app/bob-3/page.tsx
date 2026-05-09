@@ -41,7 +41,7 @@ const chapterThree = {
     "Men uzoq vaqt ichida birinchi marta o'zimga javoban samimiy, garchi juda uyatchang bo'lsa-da, tabassum qilishga ruxsat berdim.",
     "— Rahmat... — dedim sekin. Va bu safar ovozim ham qaltiramadi."
   ],
-  img: '/images/3.png'
+  img: '/images/3.webp'
 };
 
 // ============================================================

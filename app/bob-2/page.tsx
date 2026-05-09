@@ -47,7 +47,7 @@ const chapterTwo = {
     "— N-nu... — men sumkamdan yon daftarimni ehtiyotkorlik bilan oldim. — Agar biz sahnani quyosh botayotgan paytda qilsak, u shunday deyishi mumkin edi...",
     "Bu oqshom men uyga vaqtida ketmadim. Va g'alati bo'lsa-da, men bundan xursand ham edim."
   ],
-  img: '/images/2.png'
+  img: '/images/2.webp'
 };
 
 // ============================================================

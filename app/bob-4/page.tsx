@@ -36,7 +36,7 @@ const chapterFour = {
     "Men hali ham introvert edim. Men hali ham dam olish kunlarini uyda, bir jild manga o'qib o'tkazishni afzal ko'rardim. Lekin agar bu shovqinli dunyo bir kun kelib yana meni ismim bilan chaqirsa... men boshqa yashirinmayman.",
     "Men so'z beraman."
   ],
-  img: '/images/4.png'
+  img: '/images/4.webp'
 };
 
 // ============================================================

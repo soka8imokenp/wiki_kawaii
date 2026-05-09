@@ -25,7 +25,7 @@ const chapterZero = {
     "Faqat o'sha yerda, chizilgan sahifalar orasidagina o'zimni haqiqatdan xotirjam his qilaman. 2D-personajlar sendan ob-havo haqida zerikarli suhbat qurishni talab qilmaydi. Va eng asosiysi, qandaydir zo'r syujet burilishidan quyon duming xursandlikdan dir-dir titrasa ham, ular bunga umuman e'tibor berishmaydi.",
     "Xullas, bu mening hikoyam. Uni shunchaki o'z holiga qo'yishlarini judayam xohlaydigan bitta oy ruhining hikoyasi… Voy. Menimcha, siz buni juda uzoq o'qib yubordingiz. Iltimos, menga bunday qaramang, hozir yana vahimaga tushishni boshlayman!.."
   ],
-  img: '/images/0.png'
+  img: '/images/0.webp'
 };
 
 // ============================================================
@@ -122,7 +122,7 @@ export default function SumireLorePage() {
             className="relative w-20 h-20 md:w-28 md:h-28 mb-6 md:mb-8"
           >
             <Image 
-              src="/images/logo.png" 
+              src="/images/logo.webp" 
               alt="Sumire Logo" 
               fill 
               className="object-contain" 
