@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-// --- ИЗМЕНЕНИЕ: Супер-элегантные шрифты ---
+// --- SHRIFTLAR ---
 import { Cormorant_Garamond, Sacramento } from 'next/font/google';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '600', '700'] });
 const sacramento = Sacramento({ subsets: ['latin'], weight: ['400'] });
 
-// --- ДАННЫЕ ГЛАВЫ ---
+// --- ДАННЫЕ ГЛАВЫ 0 ---
 const chapterZero = {
   paragraphs: [
     "Mening ismim Sumire. Men o'n besh yoshdaman, yuqori sinfning birinchi kursida o'qiyman, qulay oversize-sviterlarni, ko'k choyni va manga o'qishni yaxshi ko'raman. Ha, aytgancha… tepa sochim orasidan ikkita uzun oq quyon quloqlari chiqib turadi, orqa tomonimda esa paxmoq dumim yashiringan.",
@@ -25,23 +25,22 @@ const chapterZero = {
     "Faqat o'sha yerda, chizilgan sahifalar orasidagina o'zimni haqiqatdan xotirjam his qilaman. 2D-personajlar sendan ob-havo haqida zerikarli suhbat qurishni talab qilmaydi. Va eng asosiysi, qandaydir zo'r syujet burilishidan quyon duming xursandlikdan dir-dir titrasa ham, ular bunga umuman e'tibor berishmaydi.",
     "Xullas, bu mening hikoyam. Uni shunchaki o'z holiga qo'yishlarini judayam xohlaydigan bitta oy ruhining hikoyasi… Voy. Menimcha, siz buni juda uzoq o'qib yubordingiz. Iltimos, menga bunday qaramang, hozir yana vahimaga tushishni boshlayman!.."
   ],
-  img: '/images/0.webp'
+  img: '/images/0.webp' 
 };
 
 // ============================================================
-// ВАУ-ЭФФЕКТ: Парящие лунные светлячки (Particles)
+// Парящие лунные светлячки (Particles)
 // ============================================================
 const FloatingParticles = () => {
   const [particles, setParticles] = useState<Array<{ id: number, x: number, y: number, size: number, duration: number }>>([]);
 
   useEffect(() => {
-    // Генерируем 20 случайных светлячков
     const newParticles = Array.from({ length: 20 }).map((_, i) => ({
       id: i,
-      x: Math.random() * 100, // Позиция по ширине %
-      y: Math.random() * 100, // Позиция по высоте %
-      size: Math.random() * 3 + 1, // Размер от 1px до 4px
-      duration: Math.random() * 10 + 10, // Длительность анимации от 10с до 20с
+      x: Math.random() * 100, 
+      y: Math.random() * 100, 
+      size: Math.random() * 3 + 1, 
+      duration: Math.random() * 10 + 10, 
     }));
     setParticles(newParticles);
   }, []);
@@ -89,24 +88,29 @@ const FadeInParagraph = ({ text }: { text: string }) => (
 
 export default function SumireLorePage() {
   return (
-    <div className="min-h-screen bg-black md:bg-[#050408] text-white selection:bg-[#8a60c2] selection:text-white overflow-x-hidden scroll-smooth">
+    <div className="min-h-screen bg-black text-white selection:bg-[#8a60c2] selection:text-white overflow-x-hidden scroll-smooth relative z-0">
       
-      {/* Фоновые эффекты: Шум, Свечения и Светлячки */}
+      {/* Градиент, который плавно растворяет верхний фиолетовый оттенок в полностью черный низ */}
+      <div className="absolute top-0 left-0 w-full h-[150vh] bg-gradient-to-b from-[#050408] via-[#050408]/80 to-black -z-10 pointer-events-none" />
+
+      {/* Фоновые эффекты: Шум и Светлячки */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-      <div className="fixed top-[10%] left-[-10%] w-[50vw] h-[50vh] bg-[#8a60c2]/10 rounded-full blur-[120px] pointer-events-none" />
       <FloatingParticles />
 
-      {/* Кнопка назад */}
+      {/* Свечение */}
+      <div className="absolute top-[10%] left-[-10%] w-[50vw] h-[50vh] bg-[#8a60c2]/10 rounded-full blur-[120px] pointer-events-none z-0" />
+
+      {/* Логотип сайта (Навбар) */}
       <nav className="fixed top-0 left-0 w-full p-4 md:p-6 z-50 flex items-center justify-between pointer-events-none">
         <a 
           href="/" 
           className="pointer-events-auto flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/5 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 transition-all font-sans"
         >
-          <ArrowLeft size={14} /> KawaiiUZ
+          KawaiiUZ
         </a>
       </nav>
 
-      {/* Шапка (Hero Section) */}
+      {/* Шапка (Hero Section) для 0-го тома */}
       <header className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-20 z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -148,7 +152,7 @@ export default function SumireLorePage() {
       </header>
 
       {/* Контент главы */}
-      <main className="relative z-10 max-w-2xl mx-auto px-6 pb-20">
+      <main className="relative z-10 w-full pb-10">
         
         {/* Заголовок тома */}
         <motion.div 
@@ -168,34 +172,35 @@ export default function SumireLorePage() {
         </motion.div>
 
         {/* Текст (Абзацы) */}
-        <div className="px-2 md:px-0">
+        <div className="max-w-2xl mx-auto px-6 md:px-0 relative z-20">
           {chapterZero.paragraphs.map((text, idx) => (
             <FadeInParagraph key={idx} text={text} />
           ))}
         </div>
 
-        {/* Картинка в конце главы с фотошопными фильтрами */}
-        <motion.div
-          initial={{ opacity: 0, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 1.5, delay: 0.2 }}
-          className="mt-20 md:mt-24 flex justify-center w-full"
+        {/* ИЗМЕНЕНИЕ: Добавили -translate-x-4 для мобильной версии, чтобы картинка сдвинулась левее */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="relative w-full max-w-4xl mx-auto aspect-square md:aspect-[4/3] mt-16 md:mt-24 flex justify-center"
         >
-          <div className="relative w-full aspect-[4/5] md:w-[500px]">
+          <div className="relative w-full h-full -translate-x-4 md:translate-x-0">
             <Image 
               src={chapterZero.img} 
               alt="Sumire 0-Tom" 
               fill 
-              className="object-contain brightness-90 saturate-75 contrast-125" 
+              className="object-contain opacity-95" 
               unoptimized 
             />
           </div>
         </motion.div>
+
       </main>
 
       {/* Футер */}
-      <footer className="relative py-20 md:py-24 border-t border-white/5 text-center z-10">
+      <footer className="relative py-20 md:py-24 text-center z-10 bg-black">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -204,11 +209,11 @@ export default function SumireLorePage() {
           <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${cormorant.className}`}>Davomi bor...</h3>
           <p className={`text-gray-400 text-xl md:text-2xl mb-10 ${sacramento.className}`}>Sumirening hikoyasini kuzatib boring</p>
           <a 
-  href="/bob-1" 
-  className="px-8 md:px-10 py-3 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500"
->
-  1-Bobni o'qish
-</a>
+            href="/bob-1" 
+            className="px-8 md:px-10 py-3 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500"
+          >
+            1 - Bobni o'qish
+          </a>
         </motion.div>
       </footer>
 
